@@ -1,0 +1,165 @@
+[gd_scene load_steps=14 format=3 uid="uid://dnoyvfigt6yn5"]
+
+[ext_resource type="PackedScene" uid="uid://c6q5toydc6lfm" path="res://Scenes/wall_endcap.tscn" id="1_272bh"]
+[ext_resource type="PackedScene" uid="uid://balmbhqmwp01w" path="res://Scenes/floor_tile_large.tscn" id="2_5vw27"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://Addons/proto_controller/proto_controller.tscn" id="4_272bh"]
+[ext_resource type="PackedScene" uid="uid://cdlni0v2t7ges" path="res://Scenes/wall_pillar.tscn" id="4_kek77"]
+[ext_resource type="PackedScene" uid="uid://dm7vjj3awhn8r" path="res://Scenes/wall.tscn" id="5_4c57u"]
+[ext_resource type="PackedScene" uid="uid://cye13kqxpbhld" path="res://Scenes/wall_corner.tscn" id="6_efxa6"]
+[ext_resource type="PackedScene" uid="uid://c6j682ljbm5i6" path="res://Scenes/column.tscn" id="7_dg77c"]
+[ext_resource type="PackedScene" uid="uid://chh1q5ml0vqka" path="res://Scenes/chest.tscn" id="8_4c57u"]
+[ext_resource type="PackedScene" uid="uid://dia1yp6ygmrhv" path="res://Scenes/chest_gold.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" uid="uid://c2vxglxy37eyi" path="res://Scenes/floor_dirt_large.tscn" id="10_dg77c"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5vw27"]
+sky_top_color = Color(0.58961, 0.764674, 0.839837, 1)
+sky_horizon_color = Color(0.980301, 1.08935, 1.13816, 1)
+ground_bottom_color = Color(0.0403236, 0.301442, 0.421534, 1)
+ground_horizon_color = Color(0.980301, 1.08935, 1.13816, 1)
+
+[sub_resource type="Sky" id="Sky_kek77"]
+sky_material = SubResource("ProceduralSkyMaterial_5vw27")
+
+[sub_resource type="Environment" id="Environment_4c57u"]
+background_mode = 2
+sky = SubResource("Sky_kek77")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4c57u")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.790155, -0.553201, 0.263863, 0, 0.430511, 0.902585, -0.612907, 0.713182, -0.340171, 0, 0, 0)
+shadow_enabled = true
+
+[node name="PuertoCaro" type="Node3D" parent="."]
+
+[node name="wall_endcap" parent="PuertoCaro" instance=ExtResource("1_272bh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+
+[node name="wall_endcap2" parent="PuertoCaro" instance=ExtResource("1_272bh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5, 0, -4.5)
+
+[node name="floor_tile_large" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+
+[node name="wall_pillar" parent="PuertoCaro" instance=ExtResource("4_kek77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1.5)
+
+[node name="floor_tile_large2" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="floor_tile_large3" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="floor_tile_large4" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="floor_tile_large5" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="floor_tile_large6" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="floor_tile_large7" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 4)
+
+[node name="floor_tile_large8" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="floor_tile_large9" parent="PuertoCaro" instance=ExtResource("2_5vw27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="wall" parent="PuertoCaro" instance=ExtResource("5_4c57u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.5, 0, 1.5)
+
+[node name="wall_corner" parent="PuertoCaro" instance=ExtResource("6_efxa6")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.5, 0, 5.5)
+
+[node name="wall_pillar2" parent="PuertoCaro" instance=ExtResource("4_kek77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 5.5)
+
+[node name="wall_corner2" parent="PuertoCaro" instance=ExtResource("6_efxa6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.5, 0, 5.5)
+
+[node name="wall2" parent="PuertoCaro" instance=ExtResource("5_4c57u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 5.5)
+
+[node name="wall3" parent="PuertoCaro" instance=ExtResource("5_4c57u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.5, 0, 2)
+
+[node name="wall_corner3" parent="PuertoCaro" instance=ExtResource("6_efxa6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.5, 0, -1.5)
+
+[node name="wall_pillar3" parent="PuertoCaro" instance=ExtResource("4_kek77")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5, 0, -2.5)
+
+[node name="column" parent="PuertoCaro" instance=ExtResource("7_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="ProtoController" parent="." instance=ExtResource("4_272bh")]
+can_sprint = true
+can_freefly = true
+input_left = "move_left"
+input_right = "move_right"
+input_forward = "move_forward"
+input_back = "move_backward"
+input_jump = "do_jump"
+input_sprint = "do_sprint"
+input_freefly = "do_freefly"
+
+[node name="chest" parent="." instance=ExtResource("8_4c57u")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, -3)
+
+[node name="chest_gold" parent="." instance=ExtResource("9_efxa6")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, -5)
+
+[node name="floor_dirt_large" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+
+[node name="floor_dirt_large2" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="floor_dirt_large3" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="floor_dirt_large4" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+
+[node name="floor_dirt_large5" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
+
+[node name="floor_dirt_large6" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="floor_dirt_large7" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+
+[node name="floor_dirt_large8" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+
+[node name="floor_dirt_large9" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+
+[node name="floor_dirt_large10" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="floor_dirt_large11" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+
+[node name="floor_dirt_large12" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
+
+[node name="floor_dirt_large13" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
+
+[node name="floor_dirt_large14" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="floor_dirt_large15" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+
+[node name="floor_dirt_large16" parent="." instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)

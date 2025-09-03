@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6j682ljbm5i6"]
+
+[ext_resource type="PackedScene" uid="uid://duqo4qg8kar0v" path="res://Models/column/column.gltf" id="1_oso6w"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3tx0i"]
+size = Vector3(0.732422, 1.61963, 0.726807)
+
+[node name="column" type="StaticBody3D"]
+
+[node name="column2" parent="." instance=ExtResource("1_oso6w")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.809521, 0)
+shape = SubResource("BoxShape3D_3tx0i")

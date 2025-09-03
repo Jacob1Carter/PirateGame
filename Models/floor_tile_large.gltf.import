@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bnpvla6b0wmqf"
-path="res://.godot/imported/wall_endcap.gltf-be1eff5922cb1b6af763a144164f58f9.scn"
+uid="uid://c3vd6gy2vrvub"
+path="res://.godot/imported/floor_tile_large.gltf-22e18ec045405b33d32844354f70d4a2.scn"
 
 [deps]
 
-source_file="res://Addons/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_endcap.gltf"
-dest_files=["res://.godot/imported/wall_endcap.gltf-be1eff5922cb1b6af763a144164f58f9.scn"]
+source_file="res://Models/floor_tile_large.gltf"
+dest_files=["res://.godot/imported/floor_tile_large.gltf-22e18ec045405b33d32844354f70d4a2.scn"]
 
 [params]
 
@@ -32,6 +32,13 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"texture": {
+"use_external/enabled": true,
+"use_external/path": "uid://beca3jgsvk0og"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

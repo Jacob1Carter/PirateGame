@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b61qi66gbi46u"
-path="res://.godot/imported/wall_corner.gltf-2e1f6d3e6fcb8417db39b91f8734869e.scn"
+uid="uid://duqo4qg8kar0v"
+path="res://.godot/imported/column.gltf-d9ff87f1633118c8a9b75a1410223829.scn"
 
 [deps]
 
-source_file="res://Addons/KayKit_DungeonRemastered_1.1_FREE/KayKit_DungeonRemastered_1.1_FREE/Assets/gltf/wall_corner.gltf"
-dest_files=["res://.godot/imported/wall_corner.gltf-2e1f6d3e6fcb8417db39b91f8734869e.scn"]
+source_file="res://Models/column.gltf"
+dest_files=["res://.godot/imported/column.gltf-d9ff87f1633118c8a9b75a1410223829.scn"]
 
 [params]
 
@@ -32,6 +32,13 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"materials": {
+"texture": {
+"use_external/enabled": true,
+"use_external/path": "uid://beca3jgsvk0og"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1

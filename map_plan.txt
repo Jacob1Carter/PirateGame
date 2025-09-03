@@ -1,0 +1,46 @@
+spawnpoit
+central square
+fountain
+execution place
+
+PORTS:
+
+south west port (poor)
+south east port (medium)
+east port (rich)
+southern island port (very rich)
+
+SHOPS:
+tailor
+blacksmith
+gunsmith
+doctor
+low tavern + inn
+mid tavern
+mid inn
+high establishment + hotel
+casino/gambling house
+grocery
+carnecery
+foshmongers
+exotic foods
+jewlers
+
+LARGE BUILDINGS:
+
+bank
+town hall
+courthouse
+jail
+navy base
+governor house
+
+FENCES:
+
+valuables
+food
+cargo
+
+ALSO:
+
+farm + farmhouse
