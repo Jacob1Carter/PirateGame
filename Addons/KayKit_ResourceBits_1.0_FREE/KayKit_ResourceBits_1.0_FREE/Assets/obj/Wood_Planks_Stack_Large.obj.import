@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://x2m00jbs1tym"
+path="res://.godot/imported/Wood_Planks_Stack_Large.obj-a6b13b127eec4722b8e3f2a4a0a7fa47.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wood_Planks_Stack_Large.obj-a6b13b127eec4722b8e3f2a4a0a7fa47.mesh"]
+
+source_file="res://Addons/KayKit_ResourceBits_1.0_FREE/KayKit_ResourceBits_1.0_FREE/Assets/obj/Wood_Planks_Stack_Large.obj"
+dest_files=["res://.godot/imported/Wood_Planks_Stack_Large.obj-a6b13b127eec4722b8e3f2a4a0a7fa47.mesh", "res://.godot/imported/Wood_Planks_Stack_Large.obj-a6b13b127eec4722b8e3f2a4a0a7fa47.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
