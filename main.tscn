@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dnoyvfigt6yn5"]
+[gd_scene load_steps=13 format=3 uid="uid://dnoyvfigt6yn5"]
 
 [ext_resource type="PackedScene" uid="uid://c6q5toydc6lfm" path="res://Scenes/wall_endcap.tscn" id="1_272bh"]
 [ext_resource type="PackedScene" uid="uid://balmbhqmwp01w" path="res://Scenes/floor_tile_large.tscn" id="2_5vw27"]
@@ -7,8 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dm7vjj3awhn8r" path="res://Scenes/wall.tscn" id="5_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cye13kqxpbhld" path="res://Scenes/wall_corner.tscn" id="6_efxa6"]
 [ext_resource type="PackedScene" uid="uid://c6j682ljbm5i6" path="res://Scenes/column.tscn" id="7_dg77c"]
-[ext_resource type="PackedScene" uid="uid://chh1q5ml0vqka" path="res://Scenes/chest.tscn" id="8_4c57u"]
-[ext_resource type="PackedScene" uid="uid://dia1yp6ygmrhv" path="res://Scenes/chest_gold.tscn" id="9_efxa6"]
+[ext_resource type="PackedScene" uid="uid://gugomn56rrx4" path="res://Scenes/chest.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://c2vxglxy37eyi" path="res://Scenes/floor_dirt_large.tscn" id="10_dg77c"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_5vw27"]
@@ -99,7 +98,56 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.5, 0
 [node name="column" parent="PuertoCaro" instance=ExtResource("7_dg77c")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
 
+[node name="floor_dirt_large" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
+
+[node name="floor_dirt_large2" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="floor_dirt_large3" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
+
+[node name="floor_dirt_large4" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
+
+[node name="floor_dirt_large5" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
+
+[node name="floor_dirt_large6" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="floor_dirt_large7" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+
+[node name="floor_dirt_large8" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+
+[node name="floor_dirt_large9" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+
+[node name="floor_dirt_large10" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="floor_dirt_large11" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
+
+[node name="floor_dirt_large12" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
+
+[node name="floor_dirt_large13" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
+
+[node name="floor_dirt_large14" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="floor_dirt_large15" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+
+[node name="floor_dirt_large16" parent="PuertoCaro" instance=ExtResource("10_dg77c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+
 [node name="ProtoController" parent="." instance=ExtResource("4_272bh")]
+collision_layer = 2
 can_sprint = true
 can_freefly = true
 input_left = "move_left"
@@ -110,56 +158,5 @@ input_jump = "do_jump"
 input_sprint = "do_sprint"
 input_freefly = "do_freefly"
 
-[node name="chest" parent="." instance=ExtResource("8_4c57u")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, -3)
-
-[node name="chest_gold" parent="." instance=ExtResource("9_efxa6")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5, 0, -5)
-
-[node name="floor_dirt_large" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -8)
-
-[node name="floor_dirt_large2" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
-
-[node name="floor_dirt_large3" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8)
-
-[node name="floor_dirt_large4" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -8)
-
-[node name="floor_dirt_large5" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
-
-[node name="floor_dirt_large6" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
-
-[node name="floor_dirt_large7" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
-
-[node name="floor_dirt_large8" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
-
-[node name="floor_dirt_large9" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
-
-[node name="floor_dirt_large10" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
-
-[node name="floor_dirt_large11" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 8)
-
-[node name="floor_dirt_large12" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 8)
-
-[node name="floor_dirt_large13" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 4)
-
-[node name="floor_dirt_large14" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
-
-[node name="floor_dirt_large15" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
-
-[node name="floor_dirt_large16" parent="." instance=ExtResource("10_dg77c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+[node name="chest" parent="." instance=ExtResource("9_kek77")]
+transform = Transform3D(0.472474, 0, 0.881345, 0, 1, 0, -0.881345, 0, 0.472474, -4.48661, 0.0259278, -6.04768)
