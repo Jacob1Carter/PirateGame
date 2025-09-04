@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bs72ogkvdd7d6"]
+[gd_scene load_steps=7 format=3 uid="uid://bs72ogkvdd7d6"]
 
-[ext_resource type="Script" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="Script" uid="uid://bw2lby6gwcj8p" path="res://Addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="PackedScene" uid="uid://baate4ic2s567" path="res://Scenes/flintlock.tscn" id="2_q37jd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -13,7 +14,11 @@ height = 1.8
 radius = 0.4
 height = 1.8
 
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_njsuj"]
+auto_exposure_enabled = true
+
 [node name="ProtoController" type="CharacterBody3D"]
+collision_layer = 2
 script = ExtResource("1_ucva2")
 
 [node name="Mesh" type="MeshInstance3D" parent="."]
@@ -30,3 +35,7 @@ shape = SubResource("CapsuleShape3D_iof21")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+attributes = SubResource("CameraAttributesPractical_njsuj")
+
+[node name="Flintlock" parent="." instance=ExtResource("2_q37jd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 1.35, -0.6)

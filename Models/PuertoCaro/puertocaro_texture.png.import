@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8fjpyioqlm6c"
-path.s3tc="res://.godot/imported/dungeon_texture.png-cf1fda1ede05820b8d2c09a16f93a90b.s3tc.ctex"
+uid="uid://bxu4g8i6sursq"
+path.s3tc="res://.godot/imported/puertocaro_texture.png-99e55183d7081a5ae1cb2e75348a3e18.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Models/dungeon_texture.png"
-dest_files=["res://.godot/imported/dungeon_texture.png-cf1fda1ede05820b8d2c09a16f93a90b.s3tc.ctex"]
+source_file="res://Models/PuertoCaro/puertocaro_texture.png"
+dest_files=["res://.godot/imported/puertocaro_texture.png-99e55183d7081a5ae1cb2e75348a3e18.s3tc.ctex"]
 
 [params]
 

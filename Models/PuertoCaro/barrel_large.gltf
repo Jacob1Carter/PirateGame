@@ -15,7 +15,7 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "wall_pillar"
+            "name" : "barrel_large"
         }
     ],
     "materials" : [
@@ -32,7 +32,7 @@
     ],
     "meshes" : [
         {
-            "name" : "wall_pillar",
+            "name" : "barrel_large",
             "primitives" : [
                 {
                     "attributes" : {
@@ -63,61 +63,61 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 1055,
+            "count" : 700,
             "max" : [
-                2,
-                4,
-                0.7499999403953552
+                0.8999999761581421,
+                2.0000009536743164,
+                0.9000003337860107
             ],
             "min" : [
-                -2,
-                0,
-                -0.75
+                -0.9000000357627869,
+                9.5367431640625e-07,
+                -0.8999995589256287
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 1055,
+            "count" : 700,
             "type" : "VEC2"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 1055,
+            "count" : 700,
             "type" : "VEC3"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 1620,
+            "count" : 1683,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 12660,
+            "byteLength" : 8400,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 8440,
-            "byteOffset" : 12660,
+            "byteLength" : 5600,
+            "byteOffset" : 8400,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 12660,
-            "byteOffset" : 21100,
+            "byteLength" : 8400,
+            "byteOffset" : 14000,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 3240,
-            "byteOffset" : 33760,
+            "byteLength" : 3366,
+            "byteOffset" : 22400,
             "target" : 34963
         }
     ],
@@ -129,8 +129,8 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 37000,
-            "uri" : "wall_pillar.bin"
+            "byteLength" : 25768,
+            "uri" : "barrel_large.bin"
         }
     ]
 }

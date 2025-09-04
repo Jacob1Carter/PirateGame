@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bsdnplshtw75b"]
+
+[ext_resource type="Texture2D" uid="uid://bxu4g8i6sursq" path="res://Models/PuertoCaro/puertocaro_texture.png" id="1_16i17"]
+
+[resource]
+albedo_texture = ExtResource("1_16i17")

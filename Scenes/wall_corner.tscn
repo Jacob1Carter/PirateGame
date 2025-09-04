@@ -1,21 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cye13kqxpbhld"]
+[gd_scene load_steps=4 format=3 uid="uid://55yvfgt1vfdg"]
 
-[ext_resource type="PackedScene" uid="uid://b61qi66gbi46u" path="res://Models/wall_corner/wall_corner.gltf" id="1_7pjfc"]
+[ext_resource type="PackedScene" uid="uid://c10rye4omv8j7" path="res://Models/PuertoCaro/wall_corner.gltf" id="1_ebqd3"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qkv4b"]
-size = Vector3(2.50195, 4.02454, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_kiwcf"]
+size = Vector3(2.5, 4, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qor3u"]
-size = Vector3(1, 4.00195, 2.40234)
+[sub_resource type="BoxShape3D" id="BoxShape3D_i2qgy"]
+size = Vector3(1, 4, 2.5)
 
 [node name="wall_corner" type="StaticBody3D"]
 
-[node name="wall_corner2" parent="." instance=ExtResource("1_7pjfc")]
+[node name="wall_corner2" parent="." instance=ExtResource("1_ebqd3")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 2, 0)
-shape = SubResource("BoxShape3D_qkv4b")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 2, 0)
+shape = SubResource("BoxShape3D_kiwcf")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.8)
-shape = SubResource("BoxShape3D_qor3u")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.75)
+shape = SubResource("BoxShape3D_i2qgy")

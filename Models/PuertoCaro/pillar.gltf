@@ -15,7 +15,7 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "wall_endcap"
+            "name" : "pillar"
         }
     ],
     "materials" : [
@@ -32,7 +32,7 @@
     ],
     "meshes" : [
         {
-            "name" : "wall_endcap",
+            "name" : "pillar",
             "primitives" : [
                 {
                     "attributes" : {
@@ -63,61 +63,61 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 472,
+            "count" : 241,
             "max" : [
-                1.0669052600860596,
+                0.7499879598617554,
                 4,
-                0.49999991059303284
+                0.75
             ],
             "min" : [
+                -0.7500120401382446,
                 0,
-                0,
-                -0.5
+                -0.7499999403953552
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 472,
+            "count" : 241,
             "type" : "VEC2"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 472,
+            "count" : 241,
             "type" : "VEC3"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 666,
+            "count" : 408,
             "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 5664,
+            "byteLength" : 2892,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 3776,
-            "byteOffset" : 5664,
+            "byteLength" : 1928,
+            "byteOffset" : 2892,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 5664,
-            "byteOffset" : 9440,
+            "byteLength" : 2892,
+            "byteOffset" : 4820,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 1332,
-            "byteOffset" : 15104,
+            "byteLength" : 816,
+            "byteOffset" : 7712,
             "target" : 34963
         }
     ],
@@ -129,8 +129,8 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 16436,
-            "uri" : "wall_endcap.bin"
+            "byteLength" : 8528,
+            "uri" : "pillar.bin"
         }
     ]
 }

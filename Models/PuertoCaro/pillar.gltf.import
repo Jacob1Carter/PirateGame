@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dhw022fprvtog"
-path="res://.godot/imported/floor_dirt_large.gltf-1aaf55d99282ac0a3fc189da072f7d95.scn"
+uid="uid://bpgo0k42ly5tj"
+path="res://.godot/imported/pillar.gltf-55ea33d21c86271418101e6ed7107622.scn"
 
 [deps]
 
-source_file="res://Models/floor_dirt_large.gltf"
-dest_files=["res://.godot/imported/floor_dirt_large.gltf-1aaf55d99282ac0a3fc189da072f7d95.scn"]
+source_file="res://Models/PuertoCaro/pillar.gltf"
+dest_files=["res://.godot/imported/pillar.gltf-55ea33d21c86271418101e6ed7107622.scn"]
 
 [params]
 
@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "texture": {
 "use_external/enabled": true,
-"use_external/path": "uid://beca3jgsvk0og"
+"use_external/path": "uid://bsdnplshtw75b"
 }
 }
 }

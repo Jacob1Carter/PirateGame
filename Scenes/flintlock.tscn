@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://baate4ic2s567"]
+
+[ext_resource type="PackedScene" uid="uid://bwsjv4hb4qnah" path="res://Models/Weapons/Flintlock.glb" id="1_c81ol"]
+
+[sub_resource type="Animation" id="Animation_s3g00"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flintlock/FlintlockPistol/TriggerPistol:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Flintlock/FlintlockPistol/HammerPistol:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ux84h"]
+resource_name = "cock"
+length = 0.250004
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flintlock/FlintlockPistol/HammerPistol:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0833375, 0.208338, 0.250004),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, -1.13446), Vector3(0, 0, -0.959931), Vector3(0, 0, 0.174533), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hl3cb"]
+resource_name = "shoot"
+length = 0.166671
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Flintlock/FlintlockPistol/TriggerPistol:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0833333, 0.125, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(3.09086e-08, -1.28028e-08, -0.785398), Vector3(3.09086e-08, -1.28028e-08, -0.785398), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Flintlock/FlintlockPistol/HammerPistol:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0416667, 0.0833333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, -1.13446)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jr6p8"]
+_data = {
+&"RESET": SubResource("Animation_s3g00"),
+&"cock": SubResource("Animation_ux84h"),
+&"shoot": SubResource("Animation_hl3cb")
+}
+
+[node name="Flintlock" type="Node3D"]
+
+[node name="Flintlock" parent="." instance=ExtResource("1_c81ol")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0, 0, 0)
+
+[node name="HammerPistol" parent="Flintlock/FlintlockPistol" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56336, 1.17421, 0.963899)
+
+[node name="TriggerPistol" parent="Flintlock/FlintlockPistol" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.88601, 0.119091, 1.42109e-14)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_jr6p8")
+}
+
+[editable path="Flintlock"]

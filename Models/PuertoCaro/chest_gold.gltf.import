@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crwepqlcrlmbp"
-path="res://.godot/imported/chest_gold.gltf-057aed58676ca641899c4088d99ba2aa.scn"
+uid="uid://cqw1yknu8y3dt"
+path="res://.godot/imported/chest_gold.gltf-52be7952b52f93e3d7c7e381012650d2.scn"
 
 [deps]
 
-source_file="res://Models/chest_gold.gltf"
-dest_files=["res://.godot/imported/chest_gold.gltf-057aed58676ca641899c4088d99ba2aa.scn"]
+source_file="res://Models/PuertoCaro/chest_gold.gltf"
+dest_files=["res://.godot/imported/chest_gold.gltf-52be7952b52f93e3d7c7e381012650d2.scn"]
 
 [params]
 
@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "texture": {
 "use_external/enabled": true,
-"use_external/path": "uid://beca3jgsvk0og"
+"use_external/path": "uid://bsdnplshtw75b"
 }
 }
 }

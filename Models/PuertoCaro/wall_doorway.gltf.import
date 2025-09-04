@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bajjr4tlm7f3j"
-path="res://.godot/imported/chest.gltf-0c27653e6cfabfe3eb4b24558e744289.scn"
+uid="uid://cva2d6qjbajqo"
+path="res://.godot/imported/wall_doorway.gltf-bfb996b928bdbcf8baa41c5e1f22e1ac.scn"
 
 [deps]
 
-source_file="res://Models/chest.gltf"
-dest_files=["res://.godot/imported/chest.gltf-0c27653e6cfabfe3eb4b24558e744289.scn"]
+source_file="res://Models/PuertoCaro/wall_doorway.gltf"
+dest_files=["res://.godot/imported/wall_doorway.gltf-bfb996b928bdbcf8baa41c5e1f22e1ac.scn"]
 
 [params]
 
@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "texture": {
 "use_external/enabled": true,
-"use_external/path": "uid://beca3jgsvk0og"
+"use_external/path": "uid://bsdnplshtw75b"
 }
 }
 }

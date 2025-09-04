@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8ssk81qpj31g"]
+
+[ext_resource type="PackedScene" uid="uid://btyyrh5hxf2j" path="res://Models/PuertoCaro/barrel_large.gltf" id="1_kl7ol"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvmio"]
+radius = 0.9
+height = 2.5
+
+[node name="barrel_large" type="StaticBody3D"]
+
+[node name="barrel_large2" parent="." instance=ExtResource("1_kl7ol")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.95, 0)
+shape = SubResource("CapsuleShape3D_hvmio")

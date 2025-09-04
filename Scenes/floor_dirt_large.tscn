@@ -1,14 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2vxglxy37eyi"]
+[gd_scene load_steps=3 format=3 uid="uid://dp8207b26n2of"]
 
-[ext_resource type="PackedScene" uid="uid://dhw022fprvtog" path="res://Models/floor_dirt_large.gltf" id="1_j6ws7"]
+[ext_resource type="PackedScene" uid="uid://kn3c6ry8p3h7" path="res://Models/PuertoCaro/floor_dirt_large.gltf" id="1_j6ws7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eckyb"]
-size = Vector3(4, 0.121094, 4)
+size = Vector3(4, 0.121521, 4)
 
 [node name="floor_dirt_large" type="StaticBody3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0346192, 0)
-shape = SubResource("BoxShape3D_eckyb")
-
 [node name="floor_dirt_large2" parent="." instance=ExtResource("1_j6ws7")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0403748, 0)
+shape = SubResource("BoxShape3D_eckyb")

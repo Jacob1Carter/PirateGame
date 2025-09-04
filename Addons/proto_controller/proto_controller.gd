@@ -12,9 +12,9 @@ extends CharacterBody3D
 ## Can we press to jump?
 @export var can_jump : bool = true
 ## Can we hold to run?
-@export var can_sprint : bool = false
+@export var can_sprint : bool = true
 ## Can we press to enter freefly mode (noclip)?
-@export var can_freefly : bool = false
+@export var can_freefly : bool = true
 
 @export_group("Speeds")
 ## Look around rotation speed.
@@ -24,39 +24,54 @@ extends CharacterBody3D
 ## Speed of jump.
 @export var jump_velocity : float = 4.5
 ## How fast do we run?
-@export var sprint_speed : float = 10.0
+@export var sprint_speed : float = 12.0
 ## How fast do we freefly?
 @export var freefly_speed : float = 25.0
 
 @export_group("Input Actions")
 ## Name of Input Action to move Left.
-@export var input_left : String = "ui_left"
+@export var input_left : String = "move_left"
 ## Name of Input Action to move Right.
-@export var input_right : String = "ui_right"
+@export var input_right : String = "move_right"
 ## Name of Input Action to move Forward.
-@export var input_forward : String = "ui_up"
+@export var input_forward : String = "move_forward"
 ## Name of Input Action to move Backward.
-@export var input_back : String = "ui_down"
+@export var input_back : String = "move_backward"
 ## Name of Input Action to Jump.
-@export var input_jump : String = "ui_accept"
+@export var input_jump : String = "do_jump"
 ## Name of Input Action to Sprint.
-@export var input_sprint : String = "sprint"
+@export var input_sprint : String = "do_sprint"
 ## Name of Input Action to toggle freefly mode.
-@export var input_freefly : String = "freefly"
+@export var input_freefly : String = "do_freefly"
+
+@export var input_shoot : String = "do_shoot"
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
 
+var gun_cocked : bool = true
+
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	
+	if Input.is_action_pressed(input_shoot):
+		push_error("MOUSEPRESSED")
+		if gun_cocked:
+			animation_player.play("shoot")
+			gun_cocked = false
+		else:
+			animation_player.play("cock")
+			gun_cocked = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing

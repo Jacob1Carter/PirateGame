@@ -1,20 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmvg3jyer1jrq"]
+[gd_scene load_steps=9 format=3 uid="uid://bj0o0vv4dqrdf"]
 
-[ext_resource type="Script" uid="uid://cnpnaub2u35jn" path="res://ChestScript.gd" id="1_cjfl1"]
-[ext_resource type="PackedScene" uid="uid://bbxwk5rlp1dio" path="res://Models/PuertoCaro/chest.gltf" id="2_cjfl1"]
+[ext_resource type="PackedScene" uid="uid://cqw1yknu8y3dt" path="res://Models/PuertoCaro/chest_gold.gltf" id="1_0idx1"]
+[ext_resource type="Script" uid="uid://cnpnaub2u35jn" path="res://ChestScript.gd" id="1_dje7b"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_bagqn"]
-size = Vector3(1.5, 1.25, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pmguq"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dje7b"]
 size = Vector3(3.5, 3.25, 3)
 
-[sub_resource type="Animation" id="Animation_j6qf6"]
+[sub_resource type="Animation" id="Animation_nhwob"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("chest2/chest/chest_lid:rotation")
+tracks/0/path = NodePath("chest_gold2/chest_gold/chest_gold_lid:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -24,14 +21,14 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_25pds"]
+[sub_resource type="Animation" id="Animation_bwax0"]
 resource_name = "close"
 length = 0.333338
 step = 0.0416667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("chest2/chest/chest_lid:rotation")
+tracks/0/path = NodePath("chest_gold2/chest_gold/chest_gold_lid:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -41,14 +38,14 @@ tracks/0/keys = {
 "values": [Vector3(-1.8326, 0, 0), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_dq33m"]
+[sub_resource type="Animation" id="Animation_8me0m"]
 resource_name = "open"
 length = 0.333338
 step = 0.0416667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("chest2/chest/chest_lid:rotation")
+tracks/0/path = NodePath("chest_gold2/chest_gold/chest_gold_lid:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -58,43 +55,46 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(-1.8326, 0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_uovm1"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nclyg"]
 _data = {
-&"RESET": SubResource("Animation_j6qf6"),
-&"close": SubResource("Animation_25pds"),
-&"open": SubResource("Animation_dq33m")
+&"RESET": SubResource("Animation_nhwob"),
+&"close": SubResource("Animation_bwax0"),
+&"open": SubResource("Animation_8me0m")
 }
 
-[node name="chest" type="StaticBody3D"]
-script = ExtResource("1_cjfl1")
+[sub_resource type="BoxShape3D" id="BoxShape3D_v60wq"]
+size = Vector3(1.5, 1.25, 1)
 
-[node name="chest2" parent="." instance=ExtResource("2_cjfl1")]
+[node name="chest_gold" type="StaticBody3D"]
+script = ExtResource("1_dje7b")
 
-[node name="chest_lid" parent="chest2/chest" index="0"]
+[node name="chest_gold2" parent="." instance=ExtResource("1_0idx1")]
+
+[node name="chest_gold_lid" parent="chest_gold2/chest_gold" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.564883)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
-shape = SubResource("BoxShape3D_bagqn")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 0)
-shape = SubResource("BoxShape3D_pmguq")
+shape = SubResource("BoxShape3D_dje7b")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-&"": SubResource("AnimationLibrary_uovm1")
+&"": SubResource("AnimationLibrary_nclyg")
 }
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 visible = false
-text = "Open/Close (f)"
+text = "Open/Close (F)"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
+shape = SubResource("BoxShape3D_v60wq")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
 
-[editable path="chest2"]
+[editable path="chest_gold2"]

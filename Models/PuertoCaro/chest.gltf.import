@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c3vd6gy2vrvub"
-path="res://.godot/imported/floor_tile_large.gltf-22e18ec045405b33d32844354f70d4a2.scn"
+uid="uid://bbxwk5rlp1dio"
+path="res://.godot/imported/chest.gltf-c21951d4812454c0da024cf621174426.scn"
 
 [deps]
 
-source_file="res://Models/floor_tile_large.gltf"
-dest_files=["res://.godot/imported/floor_tile_large.gltf-22e18ec045405b33d32844354f70d4a2.scn"]
+source_file="res://Models/PuertoCaro/chest.gltf"
+dest_files=["res://.godot/imported/chest.gltf-c21951d4812454c0da024cf621174426.scn"]
 
 [params]
 
@@ -36,7 +36,7 @@ _subresources={
 "materials": {
 "texture": {
 "use_external/enabled": true,
-"use_external/path": "uid://beca3jgsvk0og"
+"use_external/path": "uid://bsdnplshtw75b"
 }
 }
 }
