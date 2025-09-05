@@ -44,34 +44,19 @@ extends CharacterBody3D
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "do_freefly"
 
-@export var input_shoot : String = "do_shoot"
-
 var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
 
-var gun_cocked : bool = true
-
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
-
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
-	
-	if Input.is_action_pressed(input_shoot):
-		push_error("MOUSEPRESSED")
-		if gun_cocked:
-			animation_player.play("shoot")
-			gun_cocked = false
-		else:
-			animation_player.play("cock")
-			gun_cocked = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
